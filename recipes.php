@@ -83,7 +83,7 @@
             </div>
 	</div>
 	<div class="col-lg-6">
-		<p>This is going to continue to test things here</p>
+		<p>This is going to continue to test things here.</p>
 	</div>
 
     </div> <!-- /container -->
