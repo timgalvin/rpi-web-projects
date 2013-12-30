@@ -76,7 +76,7 @@
 
             while($row = mysql_fetch_array($result)) {
 		echo "<li class=\"list-group-item\">";
-		echo "<span class=\"badge\">14</span>";
+		echo "<span class=\"badge\">{$row['View_Count']}</span>";
 		echo $row['Recipe_Name'];
             }
         ?>
