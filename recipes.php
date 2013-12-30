@@ -64,7 +64,8 @@
     </div>
 
     <div class="container">
-	<div class="col-lg-4">	
+	<h1>The Recipe Vault</h1>
+	<div class="col-lg-6">	
            <div class="bs-example">
               <ul class="list-group">
                 <li class="list-group-item">
@@ -82,7 +83,7 @@
               </ul>
             </div>
 	</div>
-	<div class="col-lg-4">
+	<div class="col-lg-6">
 	<?php
             mysql_connect("localhost","root","root") or die(mysql_error());
             mysql_select_db("maindb") or die(mysql_error());
