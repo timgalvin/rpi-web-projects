@@ -72,12 +72,12 @@
             mysql_connect("localhost","root","root") or die(mysql_error());
             mysql_select_db("maindb") or die(mysql_error());
 
-            $result = mysql_query("SELECT * FROM contacts") or die(mysql_error());
+            $result = mysql_query("SELECT * FROM Recipes") or die(mysql_error());
 
             while($row = mysql_fetch_array($result)) {
 		echo "<li class=\"list-group-item\">";
 		echo "<span class=\"badge\">14</span>";
-		echo "{$row['first_name']} {$row['last_name']}";
+		echo $row['Recipe_Name'];
             }
         ?>
               </ul>
