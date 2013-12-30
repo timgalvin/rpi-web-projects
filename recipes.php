@@ -64,8 +64,8 @@
     </div>
 
     <div class="container">
-
-        <div class="bs-example">
+	<div class="col-lg-4">	
+           <div class="bs-example">
               <ul class="list-group">
                 <li class="list-group-item">
                   <span class="badge">14</span>
@@ -81,6 +81,8 @@
                 </li>
               </ul>
             </div>
+	</div>
+	<div class="col-lg-4">
 	<?php
             mysql_connect("localhost","root","root") or die(mysql_error());
             mysql_select_db("maindb") or die(mysql_error());
@@ -104,7 +106,7 @@
             }
             echo "</table>";
         ?>
-
+	</div>
 
     </div> <!-- /container -->
 
