@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="container">
 	<h1>The Recipe Vault</h1>
 	<div class="col-lg-6">	
            <div class="bs-example">
@@ -81,7 +81,6 @@
             }
         ?>
               </ul>
-		<p><a href="recipeadd.php">+New Recipe</a></p>
             </div>
 	</div>
 	<div class="col-lg-6">
@@ -89,7 +88,7 @@
 	</div>
 
     </div>
-    <div class="row">
+    <div class="container">
         <div class="col-lg-6">
             <div class="well">
               <form class="bs-example form-horizontal">
