@@ -81,6 +81,7 @@
             }
         ?>
               </ul>
+		<p><a href="recipeadd.php">+New Recipe</a></p>
             </div>
 	</div>
 	<div class="col-lg-6">
