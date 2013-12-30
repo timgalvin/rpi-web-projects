@@ -64,11 +64,34 @@
     </div>
 
     <div class="container">
+<<<<<<< HEAD
 	<h1>The Recipe Vault</h1>
 	<div class="col-lg-6">	
            <div class="bs-example">
               <ul class="list-group">
+                <li class="list-group-item">
+                  <span class="badge">14</span>
+                  Cras justo odio
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">2</span>
+                  Dapibus ac facilisis in
+                </li>
+                <li class="list-group-item">
+                  <span class="badge">1</span>
+                  Morbi leo risus
+                </li>
+              </ul>
+            </div>
+	</div>
+	<div class="col-lg-6">
 	<?php
+=======
+	<div class="col-lg-6">	
+           <div class="bs-example">
+	      <ul class="list-group">
+	      <?php
+>>>>>>> 3f144f961d125de96328ae712f1b981e7e684650
             mysql_connect("localhost","root","root") or die(mysql_error());
             mysql_select_db("maindb") or die(mysql_error());
 
@@ -84,7 +107,7 @@
             </div>
 	</div>
 	<div class="col-lg-6">
-		<p>This is going to continue to test things here.</p>
+		<p>This is going to continue to test things here</p>
 	</div>
 
     </div> <!-- /container -->
