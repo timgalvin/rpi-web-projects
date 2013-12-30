@@ -64,48 +64,26 @@
     </div>
 
     <div class="container">
-	<div class="col-lg-4">	
+	<div class="col-lg-6">	
            <div class="bs-example">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <span class="badge">14</span>
-                  Cras justo odio
-                </li>
-                <li class="list-group-item">
-                  <span class="badge">2</span>
-                  Dapibus ac facilisis in
-                </li>
-                <li class="list-group-item">
-                  <span class="badge">1</span>
-                  Morbi leo risus
-                </li>
-              </ul>
-            </div>
-	</div>
-	<div class="col-lg-4">
-	<?php
+	      <ul class="list-group">
+	      <?php
             mysql_connect("localhost","root","root") or die(mysql_error());
             mysql_select_db("maindb") or die(mysql_error());
 
             $result = mysql_query("SELECT * FROM contacts") or die(mysql_error());
-            
-            echo "<table border='1'>";
-            echo "<tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Email</th><th>Favorite Color</th></tr>";
+
             while($row = mysql_fetch_array($result)) {
-                echo "<tr><td>";
-                echo $row['first_name'];
-                echo "</td><td>";
-                echo $row['last_name'];
-                echo "</td><td>";
-                echo $row['phone'];
-                echo "</td><td>";
-                echo $row['email'];
-                echo "</td><td>";
-                echo $row['favorite_color'];
-                echo "</td></tr>";
+		echo "<li class=\"list-group-item\">";
+		echo "<span class=\"badge\">14</span>";
+		echo "{$row['first_name']} {$row['last_name']}";
             }
-            echo "</table>";
         ?>
+              </ul>
+            </div>
+	</div>
+	<div class="col-lg-6">
+		<p>This is going to continue to test things here</p>
 	</div>
 
     </div> <!-- /container -->
