@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php 
-            echo "Hi there";
+            echo exec('whoami');
         ?>
     </body>
 </html>

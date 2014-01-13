@@ -5,7 +5,7 @@
     </head>
     <body>
         <?php 
-            echo exec('whoami');
+            echo exec('./a.out');
         ?>
     </body>
 </html>
