@@ -9,7 +9,7 @@
         <p>Here's where we'll display the DB</p>
         <center>
         <?php
-            mysql_connect("localhost","root","root") or die(mysql_error());
+            mysql_connect("localhost","dataworker","admin") or die(mysql_error());
             mysql_select_db("maindb") or die(mysql_error());
 
             $result = mysql_query("SELECT * FROM contacts") or die(mysql_error());
