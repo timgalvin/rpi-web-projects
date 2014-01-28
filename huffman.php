@@ -100,7 +100,12 @@
                   </div>
                 </fieldset>
               </form>
-              
+              here we test
+              <?php
+                if (!empty($_POST)) {
+                    echo $outputs[1];
+                }
+              ?>
             </div>
           </div>
 	  <div class="col-lg-6">
