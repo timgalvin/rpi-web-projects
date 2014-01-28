@@ -100,10 +100,13 @@
                   </div>
                 </fieldset>
               </form>
-              here we test
+              
               <?php
                 if (!empty($_POST)) {
-                    echo $outputs[1];
+                    echo '<div class="bs-example"><ul class="list-group">';
+                    echo '<li class="list-group-item">One item</li>';
+                    echo '<li class="list-group-item">Two item</li>';
+                    echo '</ul></div>';
                 }
               ?>
             </div>
