@@ -65,21 +65,7 @@
 
     <div class="container">
 	<h1>Huffman Encoding</h1>
-	<div class="col-lg-6">	
-           <div class="bs-example">
-              <ul class="list-group">
-	            <li>Here is one</li>
-                <li>Here is one</li>
-                <li>Here is one</li>
-              </ul>
-            </div>
-	</div>
-	<div class="col-lg-6">
-		<p>Here we can write about information about the Huffman algorithm and give thanks where needed.</p>
-	</div>
-
-    </div>
-    <div class="container">
+      <div class="container">
         <div class="col-lg-6">
             <div class="well">
               <form class="bs-example form-horizontal" method="post" action="">
@@ -118,7 +104,13 @@
               
             </div>
           </div>
+      </div>
+	<div class="col-lg-6">
+		<p>Here we can write about information about the Huffman algorithm and give thanks where needed.</p>
+	</div>
+
     </div>
+    
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
