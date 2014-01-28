@@ -119,8 +119,9 @@
           </div>
 	  <div class="col-lg-6">
 		  <p>This page uses the Huffman encoding algorithm to compress a string of text in to a smaller size. The resulting output is in "human readable" binary (a bunch of 1's and 0's).</p>
-          <p>David A. Huffman pioneered this compression method during his Ph.D. research at MIT. This method is optimal when one character is to be represented on its own. Although more effective algorithms exist for compressing data, they operate on the basis grouping patterns of characters together. Still, Huffman encoding can produce some impressive results.</p>
+          <p>David A. Huffman pioneered this compression method during his Ph.D. research at MIT in 1952. This method is optimal when one character is to be represented on its own. Although more effective algorithms exist for compressing data, they operate on the basis grouping patterns of characters together. Still, Huffman encoding can produce some impressive results.</p>
           <p>The code I wrote for the encoding can be found on <a href="https://github.com/timgalvin/huffman-translator">GitHub</a>. Big thanks go out to all of my information sources for this project including Dr. Zander from UW Bothell, <a href="http://en.wikipedia.org/wiki/Huffman_coding">Wikipedia</a>, Kenneth H. Rosen's <a href="http://amzn.com/0073383090">Discrete Mathematics</a> book, and <a href="http://www.programminglogic.com/implementing-huffman-coding-in-c/">Daniel Scocco</a>.</p>
+          <p>As time permits, I plan to add functionality for encoding the binary output to actual characters, file I/O, and sharing.</p>
           
 	  </div>
 
