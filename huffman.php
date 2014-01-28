@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Recipe Database</title>
+    <title>Huffman Encoding</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -34,15 +34,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Kona's House</a>
+          <a class="navbar-brand" href="#">Tim Galvin</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="#">Recipes</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="recipes.php">Recipes</a></li>
+            <li class="active"><a href="#">Huffman</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Action</a></li>
                 <li><a href="#">Another action</a></li>
@@ -104,8 +104,11 @@
               <?php
                 if (!empty($_POST)) {
                     echo '<div class="bs-example"><ul class="list-group">';
-                    echo '<li class="list-group-item active">Binary Codes</li>';
+                    echo '<li class="list-group-item">Binary Codes:</li>';
                     for ($i = 1; $i < sizeof($outputs); $i++) {
+                        if ($outputs[$i] == ' ') {
+                            $outputs[$i] = 'space';
+                        }
                         echo '<li class="list-group-item">' . $outputs[$i] . '</li>';
                     }
                     echo '</ul></div>';
