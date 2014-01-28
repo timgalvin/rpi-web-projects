@@ -73,7 +73,7 @@
                             echo $_POST["inputtext"];
                         }
                       ?></textarea>
-                      <span class="help-block">Enter up to 5000 characters to encode. Use only alphanumeric, ".", and ","</span>
+                      <span class="help-block">Enter up to 5000 characters to encode. Use only alphanumeric, periods, and commas.</span>
                     </div>
                   </div>
                   <div class="form-group">
@@ -87,7 +87,6 @@
                       <textarea class="form-control" rows="10" id="textArea"><?php
                            if (!empty($_POST)) {
                               $escInput = escapeshellcmd($_POST["inputtext"]);
-                              echo "escInput: " . $escInput;
                               $output = shell_exec('/home/pi/huffman-translator/huffman "' . $escInput . '"');
                               $outputs = explode("@@@", $output);
                               echo $outputs[0];
@@ -100,6 +99,11 @@
               
               <?php
                 if (!empty($_POST)) {
+                    echo "<h2>Compression Stats:</h2>";
+                    $origLength = strlen($_POST["inputtext"]);
+                    $finalLength = strlen($outputs[0]) / 8;
+                    $ratio = $finalLength / $origLength;
+                    echo '<p>Compression ratio: ' . $ratio . '</p>';
                     echo '<div class="bs-example"><ul class="list-group">';
                     echo '<li class="list-group-item">Binary Codes:</li>';
                     for ($i = 1; $i < sizeof($outputs); $i++) {
