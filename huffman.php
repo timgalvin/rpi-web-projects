@@ -98,12 +98,9 @@
                   <div class="form-group">
                     <label for="textArea" class="col-lg-2 control-label">Binary Output</label>
                     <div class="col-lg-10">
-                      <textarea class="form-control" rows="10" id="textArea">
-                        <?php
+                      <textarea class="form-control" rows="10" id="textArea"><?php
                            $output = shell_exec('/home/pi/huffman-translator/huffman "Arguments for days"');
-                           echo "test";
-                        ?>
-                      </textarea>
+                           echo $output;?></textarea>
                       <span class="help-block">Enter up to 5000 characters to encode.</span>
                     </div>
                   </div>
