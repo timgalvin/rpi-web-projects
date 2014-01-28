@@ -68,7 +68,9 @@
 	<div class="col-lg-6">	
            <div class="bs-example">
               <ul class="list-group">
-	            
+	            <li>Here is one</li>
+                <li>Here is one</li>
+                <li>Here is one</li>
               </ul>
             </div>
 	</div>
@@ -86,7 +88,11 @@
                   <div class="form-group">
                     <label for="textArea" class="col-lg-2 control-label">Input Text</label>
                     <div class="col-lg-10">
-                      <textarea class="form-control" rows="10" id="textArea" name="inputtext"></textarea>
+                      <textarea class="form-control" rows="10" id="textArea" name="inputtext"><?php 
+                        if (!empty($_POST)) {
+                            echo $_POST["inputtext"];
+                        }
+                      ?></textarea>
                       <span class="help-block">Enter up to 5000 characters to encode.</span>
                     </div>
                   </div>
@@ -102,14 +108,14 @@
                            if (!empty($_POST)) {
                               $output = shell_exec('/home/pi/huffman-translator/huffman "' . $_POST["inputtext"] . '"');
                               $outputs = explode("@@@", $output);
-                              echo $outputs[0] . ' for: ' . $_POST["inputtext"];
+                              echo $outputs[0];
                            }
                            ?></textarea>
-                      <span class="help-block">Enter up to 5000 characters to encode.</span>
                     </div>
                   </div>
                 </fieldset>
               </form>
+              
             </div>
           </div>
     </div>
