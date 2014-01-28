@@ -104,8 +104,10 @@
               <?php
                 if (!empty($_POST)) {
                     echo '<div class="bs-example"><ul class="list-group">';
-                    echo '<li class="list-group-item">One item</li>';
-                    echo '<li class="list-group-item">Two item</li>';
+                    echo '<li class="list-group-item active">Binary Codes</li>';
+                    for ($i = 1; $i < sizeof($outputs); $i++) {
+                        echo '<li class="list-group-item">' . $outputs[$i] . '</li>';
+                    }
                     echo '</ul></div>';
                 }
               ?>
