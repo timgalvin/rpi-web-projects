@@ -101,7 +101,8 @@
                       <textarea class="form-control" rows="10" id="textArea"><?php
                            if (!empty($_POST)) {
                               $output = shell_exec('/home/pi/huffman-translator/huffman "' . $_POST["inputtext"] . '"');
-                              echo $output;
+                              $outputs = explode("@@@", $output);
+                              echo $outputs[0] . ' for: ' . $_POST["inputtext"];
                            }
                            ?></textarea>
                       <span class="help-block">Enter up to 5000 characters to encode.</span>
