@@ -102,7 +102,7 @@
                     echo "<h2>Compression Stats:</h2>";
                     $origLength = strlen($_POST["inputtext"]);
                     $finalLength = strlen($outputs[0]) / 8;
-                    $ratio = $finalLength / $origLength;
+                    $ratio = number_format(($finalLength / $origLength), 2);
                     echo '<p>Compression ratio: ' . $ratio . '</p>';
                     echo '<div class="bs-example"><ul class="list-group">';
                     echo '<li class="list-group-item">Binary Codes:</li>';
