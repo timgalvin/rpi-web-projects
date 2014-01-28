@@ -86,7 +86,9 @@
                     <div class="col-lg-10">
                       <textarea class="form-control" rows="10" id="textArea"><?php
                            if (!empty($_POST)) {
-                              $output = shell_exec('/home/pi/huffman-translator/huffman "' . $_POST["inputtext"] . '"');
+                              $escInput = escapeshellcmd($_POST["inputtext"]);
+                              echo "escInput: " . $escInput;
+                              $output = shell_exec('/home/pi/huffman-translator/huffman "' . $escInput . '"');
                               $outputs = explode("@@@", $output);
                               echo $outputs[0];
                            }
