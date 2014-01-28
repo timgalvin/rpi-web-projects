@@ -86,7 +86,7 @@
                   <div class="form-group">
                     <label for="textArea" class="col-lg-2 control-label">Input Text</label>
                     <div class="col-lg-10">
-                      <textarea class="form-control" rows="10" id="textArea"></textarea>
+                      <textarea class="form-control" rows="10" id="textArea" name="inputtext"></textarea>
                       <span class="help-block">Enter up to 5000 characters to encode.</span>
                     </div>
                   </div>
