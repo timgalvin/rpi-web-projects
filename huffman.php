@@ -65,7 +65,6 @@
 
     <div class="container">
 	<h1>Huffman Encoding</h1>
-      <div class="container">
         <div class="col-lg-6">
             <div class="well">
               <form class="bs-example form-horizontal" method="post" action="">
@@ -104,10 +103,9 @@
               
             </div>
           </div>
-      </div>
-	<div class="col-lg-6">
-		<p>Here we can write about information about the Huffman algorithm and give thanks where needed.</p>
-	</div>
+	  <div class="col-lg-6">
+		  <p>Here we can write about information about the Huffman algorithm and give thanks where needed.</p>
+	  </div>
 
     </div>
     
