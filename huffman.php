@@ -103,7 +103,7 @@
                     $origLength = strlen($_POST["inputtext"]);
                     $finalLength = strlen($outputs[0]) / 8;
                     $ratio = round(($finalLength / $origLength), 2);
-                    echo '<p>Compression ratio: ' . $ratio . '</p>';
+                    echo '<p>Output size factor:  ' . $ratio . '</p>';
                     echo '<div class="bs-example"><ul class="list-group">';
                     echo '<li class="list-group-item"><b>Binary Codes:</b></li>';
                     for ($i = 1; $i < sizeof($outputs); $i++) {
@@ -118,7 +118,10 @@
             </div>
           </div>
 	  <div class="col-lg-6">
-		  <p>Here we can write about information about the Huffman algorithm and give thanks where needed.</p>
+		  <p>This page uses the Huffman encoding algorithm to compress a string of text in to a smaller size. The resulting output is in "human readable" binary (a bunch of 1's and 0's).</p>
+          <p>David A. Huffman pioneered this compression method during his Ph.D. research at MIT. This method is optimal when one character is to be represented on its own. Although more effective algorithms exist for compressing data, they operate on the basis grouping patterns of characters together. Still, Huffman encoding can produce some impressive results.</p>
+          <p>The code I wrote for the encoding can be found on <a href="https://github.com/timgalvin/huffman-translator">GitHub</a>. Big thanks go out to all of my information sources for this project including <a href="http://en.wikipedia.org/wiki/Huffman_coding">Wikipedia</a>, Kenneth H. Rosen's <a href="http://amzn.com/0073383090">Discrete Mathematics</a> book, and <a href="http://www.programminglogic.com/implementing-huffman-coding-in-c/">Daniel Scocco</a>.</p>
+          
 	  </div>
 
     </div>
