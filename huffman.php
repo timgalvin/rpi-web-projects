@@ -100,7 +100,7 @@
                     <div class="col-lg-10">
                       <textarea class="form-control" rows="10" id="textArea"><?php
                            if (!empty($_POST)) {
-                              $output = shell_exec('/home/pi/huffman-translator/huffman "Arguments for days"');
+                              $output = shell_exec('/home/pi/huffman-translator/huffman "' . $_POST["inputtext"] . '"');
                               echo $output;
                            }
                            ?></textarea>
