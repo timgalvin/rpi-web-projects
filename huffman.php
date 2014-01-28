@@ -99,13 +99,13 @@
               
               <?php
                 if (!empty($_POST)) {
-                    echo "<h2>Compression Stats:</h2>";
+                    echo "<h3>Compression Stats:</h3>";
                     $origLength = strlen($_POST["inputtext"]);
                     $finalLength = strlen($outputs[0]) / 8;
-                    $ratio = number_format(($finalLength / $origLength), 2);
+                    $ratio = round(($finalLength / $origLength), 2);
                     echo '<p>Compression ratio: ' . $ratio . '</p>';
                     echo '<div class="bs-example"><ul class="list-group">';
-                    echo '<li class="list-group-item">Binary Codes:</li>';
+                    echo '<li class="list-group-item"><b>Binary Codes:</b></li>';
                     for ($i = 1; $i < sizeof($outputs); $i++) {
                         if ($outputs[$i] == ' ') {
                             $outputs[$i] = 'space';
