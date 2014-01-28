@@ -102,6 +102,7 @@
                            if (!empty($_POST)) {
                               $output = shell_exec('/home/pi/huffman-translator/huffman "Arguments for days"');
                               echo $output;
+                           }
                            ?></textarea>
                       <span class="help-block">Enter up to 5000 characters to encode.</span>
                     </div>
