@@ -68,10 +68,7 @@
 	<div class="col-lg-6">	
            <div class="bs-example">
               <ul class="list-group">
-	            <?php
-                    $output = shell_exec('/home/pi/huffman-translator/huffman "Arguments for days"');
-                    echo $output;
-                ?>
+	            
               </ul>
             </div>
 	</div>
@@ -96,6 +93,18 @@
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                       <button type="submit" class="btn btn-primary">Submit</button> 
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label">Binary Output</label>
+                    <div class="col-lg-10">
+                      <textarea class="form-control" rows="10" id="textArea">
+                        <?php
+                           $output = shell_exec('/home/pi/huffman-translator/huffman "Arguments for days"');
+                           echo $output;
+                        ?>
+                      </textarea>
+                      <span class="help-block">Enter up to 5000 characters to encode.</span>
                     </div>
                   </div>
                 </fieldset>
