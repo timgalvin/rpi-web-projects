@@ -73,7 +73,7 @@
                             echo $_POST["inputtext"];
                         }
                       ?></textarea>
-                      <span class="help-block">Enter up to 5000 characters to encode.</span>
+                      <span class="help-block">Enter up to 5000 characters to encode. Use only alphanumeric, ".", and ","</span>
                     </div>
                   </div>
                   <div class="form-group">
