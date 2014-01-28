@@ -71,7 +71,6 @@
 
             while($row = mysql_fetch_array($result)) {
 		        echo "<li class=\"list-group-item\">";
-		        echo "<span class=\"badge\">{$row['View_Count']}</span>";
 		        echo $row['Recipe_Name'];
             }
         ?>
@@ -79,7 +78,7 @@
             </div>
 	</div>
 	<div class="col-lg-6">
-		<p>This is going to continue to test things here.</p>
+		<p>When I'm coding, I'm always thinking about food, and when I'm eating I am usually thinking of ways to tackle my latest coding challenge. This page seeks to combine two of my favorite things in to one. The real goal here was to become more comfortable working with databases.</p><p>Feel free to take a look at one of my favorite recipes here on this page and give one a try!</p>
 	</div>
 
     </div>
