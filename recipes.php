@@ -75,7 +75,7 @@
                     echo "</ul>";
                      
                     if (!empty($_POST)) {
-                       $myQuery = "INSERT INTO recipes VALUES (Recipe_Name";
+                       $myQuery = "\"INSERT INTO recipes VALUES (Recipe_Name";
                        $tailQuery = "VALUES ('" . $_POST['recipeName'] . "'";
                        if (isset($_POST['ingredient1'])) {
                           $myQuery = $myQuery . ", Ingredient1";
@@ -121,7 +121,8 @@
                           $myQuery = $myQuery . ", Instructions";
                           $tailQuery = $tailQuery . ", '" . $_POST['instructions'] . "'";
                        }
-                       $myQuery = $myQuery . ") " . $tailQuery . ");";
+                       $myQuery = $myQuery . ") " . $tailQuery . ");\"";
+                       //mysql_query($myQuery);
                        echo $myQuery;
                     }
                  ?>
