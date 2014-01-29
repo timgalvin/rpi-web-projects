@@ -72,7 +72,7 @@
 		               echo "<li class=\"list-group-item\">";
 		               echo $row['Recipe_Name'];
                     }
-                     
+                    /* 
                     if (!empty($_POST)) {
                        $myQuery = "INSERT INTO recipes VALUES (Recipe_Name";
                        $tailQuery = "VALUES ('" . $_POST['recipeName'] . "'";
@@ -122,7 +122,7 @@
                        }
                        $myQuery = $myQuery . ") " . $tailQuery . ");";
                        echo $myQuery;
-                    }
+                    }*/
                  ?>
               </ul>
             </div>
