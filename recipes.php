@@ -117,6 +117,21 @@
                        $myQuery = $myQuery . ") " . $tailQuery . ");";
                        mysql_query($myQuery) or die(mysql_error());
                     }
+                    
+                    if (!empty($_GET)) {
+                       $findRecipe = "SELECT * FROM Recipes WHERE ID=" . $_GET['id'];
+                       $findResult = mysql_query($findRecipe) or die(mysql_error());
+                       $resultRow = mysql_fetch_array($findResult);
+                       echo "<div class=\"panel panel-info\">         
+                          <div class=\"panel-heading\">
+                             <h3 class=\"panel-title\">" . $resultRow['Recipe_Name'] . "</h3>
+                          </div>
+                          <div class=\"panel-body\">
+                             Panel content
+                          </div>
+                       </div>";
+            
+                    }
 
                     $result = mysql_query("SELECT * FROM Recipes") or die(mysql_error());
 
