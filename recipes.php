@@ -66,14 +66,7 @@
 	             <?php
                     mysql_connect("localhost","dataworker","admin") or die(mysql_error());
                     mysql_select_db("maindb") or die(mysql_error());
-                    $result = mysql_query("SELECT * FROM Recipes") or die(mysql_error());
 
-                    while($row = mysql_fetch_array($result)) {
-		               echo "<li class=\"list-group-item\">";
-		               echo $row['Recipe_Name'];
-                    }
-                    echo "</ul>";
-                     
                     if (!empty($_POST)) {
                        $myQuery = "INSERT INTO Recipes (Recipe_Name";
                        $tailQuery = "VALUES ('" . $_POST['recipeName'] . "'";
@@ -123,8 +116,15 @@
                        }
                        $myQuery = $myQuery . ") " . $tailQuery . ");";
                        mysql_query($myQuery) or die(mysql_error());
-                       //echo "<p>" . $myQuery . "</p>";
                     }
+
+                    $result = mysql_query("SELECT * FROM Recipes") or die(mysql_error());
+
+                    while($row = mysql_fetch_array($result)) {
+		               echo "<li class=\"list-group-item\">";
+		               echo $row['Recipe_Name'];
+                    }
+                    echo "</ul>";
                  ?>
             </div>
 	</div>
