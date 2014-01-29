@@ -75,7 +75,7 @@
                     echo "</ul>";
                      
                     if (!empty($_POST)) {
-                       $myQuery = "\"INSERT INTO recipes VALUES (Recipe_Name";
+                       $myQuery = "\"INSERT INTO Recipes VALUES (Recipe_Name";
                        $tailQuery = "VALUES ('" . $_POST['recipeName'] . "'";
                        if (isset($_POST['ingredient1'])) {
                           $myQuery = $myQuery . ", Ingredient1";
