@@ -72,6 +72,57 @@
 		               echo "<li class=\"list-group-item\">";
 		               echo $row['Recipe_Name'];
                     }
+                     
+                    if (!empty($_POST)) {
+                       $myQuery = "INSERT INTO recipes VALUES (Recipe_Name";
+                       $tailQuery = "VALUES ('" . $_POST['recipeName'] . "'";
+                       if (isset($_POST['ingredient1']) {
+                          $myQuery = $myQuery . ", Ingredient1";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient1'] . "'";
+                       }
+                       if (isset($_POST['ingredient2']) {
+                          $myQuery = $myQuery . ", Ingredient2";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient2'] . "'";
+                       }
+                       if (isset($_POST['ingredient3']) {
+                          $myQuery = $myQuery . ", Ingredient3";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient3'] . "'";
+                       }
+                       if (isset($_POST['ingredient4']) {
+                          $myQuery = $myQuery . ", Ingredient4";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient4'] . "'";
+                       }
+                       if (isset($_POST['ingredient5']) {
+                          $myQuery = $myQuery . ", Ingredient5";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient5'] . "'";
+                       }
+                       if (isset($_POST['ingredient6']) {
+                          $myQuery = $myQuery . ", Ingredient6";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient6'] . "'";
+                       }
+                       if (isset($_POST['ingredient7']) {
+                          $myQuery = $myQuery . ", Ingredient7";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient7'] . "'";
+                       }
+                       if (isset($_POST['ingredient8']) {
+                          $myQuery = $myQuery . ", Ingredient8";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient8'] . "'";
+                       }
+                       if (isset($_POST['ingredient9']) {
+                          $myQuery = $myQuery . ", Ingredient9";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient9'] . "'";
+                       }
+                       if (isset($_POST['ingredient10']) {
+                          $myQuery = $myQuery . ", Ingredient10";
+                          $tailQuery = $tailQuery . ", '" . $_POST['ingredient10'] . "'";
+                       }
+                       if (isset($_POST['instructions']) {
+                          $myQuery = $myQuery . ", Instructions";
+                          $tailQuery = $tailQuery . ", '" . $_POST['instructions'] . "'";
+                       }
+                       $myQuery = $myQuery . ") " . $tailQuery . ");";
+                       echo $myQuery;
+                    }
                  ?>
               </ul>
             </div>
@@ -84,7 +135,7 @@
     <div class="container">
         <div class="col-lg-6">
             <div class="well">
-              <form class="bs-example form-horizontal">
+              <form class="bs-example form-horizontal" method="post" action="">
                 <fieldset>
                   <legend>Enter a new recipe</legend>
                   <div class="form-group">
@@ -94,63 +145,70 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng1" class="col-lg-2 control-label">Ingredient 1</label>
+                    <label for="inputIng1" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng1" name="ingredient1"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng2" class="col-lg-2 control-label">Ingredient 2</label>
+                    <label for="inputIng2" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng2" name="ingredient2"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng3" class="col-lg-2 control-label">Ingredient 3</label>
+                    <label for="inputIng3" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng3" name="ingredient3"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng4" class="col-lg-2 control-label">Ingredient 4</label>
+                    <label for="inputIng4" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng4" name="ingredient4"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng5" class="col-lg-2 control-label">Ingredient 5</label>
+                    <label for="inputIng5" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng5" name="ingredient5"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng6" class="col-lg-2 control-label">Ingredient 6</label>
+                    <label for="inputIng6" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng6" name="ingredient6"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng7" class="col-lg-2 control-label">Ingredient 7</label>
+                    <label for="inputIng7" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng7" name="ingredient7"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng8" class="col-lg-2 control-label">Ingredient 8</label>
+                    <label for="inputIng8" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng8" name="ingredient8"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng9" class="col-lg-2 control-label">Ingredient 9</label>
+                    <label for="inputIng9" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng9" name="ingredient9"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputIng10" class="col-lg-2 control-label">Ingredient 10</label>
+                    <label for="inputIng10" class="col-lg-2 control-label">Ingredient</label>
                     <div class="col-lg-10">
                       <input type="text" class="form-control" id="inputIng10" name="ingredient10"></input>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label">Instructions</label>
+                    <div class="col-lg-10">
+                      <textarea class="form-control" rows="7" id="textArea" name="instructions"></textarea>
+                      <span class="help-block">Enter instructions for the recipe here.</span>
                     </div>
                   </div>
                   <div class="form-group">
