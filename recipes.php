@@ -122,8 +122,7 @@
                           $tailQuery = $tailQuery . ", '" . $_POST['instructions'] . "'";
                        }
                        $myQuery = $myQuery . ") " . $tailQuery . ");\"";
-                       //mysql_query($myQuery);
-                       echo $myQuery;
+                       mysql_query($myQuery) or die(mysql_error());
                     }
                  ?>
             </div>
