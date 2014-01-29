@@ -152,11 +152,6 @@
             </div>
 	</div>
 	<div class="col-lg-6">
-        <?php
-           if (!empty($_GET)) {
-              echo "<h3>Not empty with: " . $_GET['id'] . "</h3>";
-           }
-        ?>
 		<p>When I'm coding, I'm always thinking about food, and when I'm eating I am usually thinking of ways to tackle my latest coding challenge. This page seeks to combine two of my favorite things in to one. The real goal here was to become more comfortable working with databases.</p><p>Feel free to take a look at one of my favorite recipes here on this page and give one a try!</p>
 	</div>
 
