@@ -75,7 +75,7 @@
                     echo "</ul>";
                      
                     if (!empty($_POST)) {
-                       $myQuery = "\"INSERT INTO Recipes (Recipe_Name";
+                       $myQuery = "INSERT INTO Recipes (Recipe_Name";
                        $tailQuery = "VALUES ('" . $_POST['recipeName'] . "'";
                        if (isset($_POST['ingredient1'])) {
                           $myQuery = $myQuery . ", Ingredient1";
@@ -121,9 +121,9 @@
                           $myQuery = $myQuery . ", Instructions";
                           $tailQuery = $tailQuery . ", '" . $_POST['instructions'] . "'";
                        }
-                       $myQuery = $myQuery . ") " . $tailQuery . ");\"";
-                       //mysql_query($myQuery) or die(mysql_error());
-                       echo "<p>" . $myQuery . "</p>";
+                       $myQuery = $myQuery . ") " . $tailQuery . ");";
+                       mysql_query($myQuery) or die(mysql_error());
+                       //echo "<p>" . $myQuery . "</p>";
                     }
                  ?>
             </div>
