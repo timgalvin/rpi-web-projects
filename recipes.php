@@ -133,8 +133,8 @@
                            }
                        }
                        echo    "</ul>";
-                       if ($resultRow[12] != '') {
-                              echo "<h4>Instructions</h4><p>" . $resultRow[11] . "</p>";
+                       if ($resultRow['Instructions'] != '') {
+                              echo "<h4>Instructions</h4><p>" . $resultRow['Instructions'] . "</p>";
                            }
                        echo    "</div>
                              </div>";
