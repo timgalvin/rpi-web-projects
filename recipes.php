@@ -122,14 +122,22 @@
                        $findRecipe = "SELECT * FROM Recipes WHERE ID=" . $_GET['id'];
                        $findResult = mysql_query($findRecipe) or die(mysql_error());
                        $resultRow = mysql_fetch_array($findResult);
-                       echo "<div class=\"panel panel-info\">         
-                          <div class=\"panel-heading\">
-                             <h3 class=\"panel-title\">" . $resultRow['Recipe_Name'] . "</h3>
-                          </div>
-                          <div class=\"panel-body\">
-                             Panel content
-                          </div>
-                       </div>";
+                       echo "<div class=\"panel panel-primary\">         
+                               <div class=\"panel-heading\">
+                                  <h3 class=\"panel-title\">" . $resultRow['Recipe_Name'] . "</h3>
+                               </div>
+                               <div class=\"panel-body\"><h3>Ingredients</h3><ul>";
+                       for ($i = 1; $i < 11; $i++) {
+                           if ($resultRow[$i] != '') {
+                              echo "<li>" . $resultRow[$i] . "</li>";
+                           }
+                       }
+                       echo    "</ul>";
+                       if ($resultRow[11] != '') {
+                              echo "<h3>Instructions</h3><p>" . $resultRow[11] . "</p>";
+                           }
+                       echo    "</div>
+                             </div>";
             
                     }
 
