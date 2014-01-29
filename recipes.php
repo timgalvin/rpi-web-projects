@@ -63,17 +63,16 @@
 	<div class="col-lg-6">	
            <div class="bs-example">
               <ul class="list-group">
-	<?php
-            mysql_connect("localhost","dataworker","admin") or die(mysql_error());
-            mysql_select_db("maindb") or die(mysql_error());
+	             <?php
+                    mysql_connect("localhost","dataworker","admin") or die(mysql_error());
+                    mysql_select_db("maindb") or die(mysql_error());
+                    $result = mysql_query("SELECT * FROM Recipes") or die(mysql_error());
 
-            $result = mysql_query("SELECT * FROM Recipes") or die(mysql_error());
-
-            while($row = mysql_fetch_array($result)) {
-		        echo "<li class=\"list-group-item\">";
-		        echo $row['Recipe_Name'];
-            }
-        ?>
+                    while($row = mysql_fetch_array($result)) {
+		               echo "<li class=\"list-group-item\">";
+		               echo $row['Recipe_Name'];
+                    }
+                 ?>
               </ul>
             </div>
 	</div>
@@ -87,71 +86,75 @@
             <div class="well">
               <form class="bs-example form-horizontal">
                 <fieldset>
-                  <legend>Legend</legend>
+                  <legend>Enter a new recipe</legend>
                   <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <label for="inputEmail" class="col-lg-2 control-label">Title</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                      <input type="text" class="form-control" id="inputRecipeName" name="recipeName"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <label for="inputIng1" class="col-lg-2 control-label">Ingredient 1</label>
                     <div class="col-lg-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox"> Checkbox
-                        </label>
-                      </div>
+                      <input type="text" class="form-control" id="inputIng1" name="ingredient1"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+                    <label for="inputIng2" class="col-lg-2 control-label">Ingredient 2</label>
                     <div class="col-lg-10">
-                      <textarea class="form-control" rows="3" id="textArea"></textarea>
-                      <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                      <input type="text" class="form-control" id="inputIng2" name="ingredient2"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-lg-2 control-label">Radios</label>
+                    <label for="inputIng3" class="col-lg-2 control-label">Ingredient 3</label>
                     <div class="col-lg-10">
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                          Option one is this
-                        </label>
-                      </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                          Option two can be something else
-                        </label>
-                      </div>
+                      <input type="text" class="form-control" id="inputIng3" name="ingredient3"></input>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">Selects</label>
+                    <label for="inputIng4" class="col-lg-2 control-label">Ingredient 4</label>
                     <div class="col-lg-10">
-                      <select class="form-control" id="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                      <br>
-                      <select multiple="" class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
+                      <input type="text" class="form-control" id="inputIng4" name="ingredient4"></input>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputIng5" class="col-lg-2 control-label">Ingredient 5</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputIng5" name="ingredient5"></input>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputIng6" class="col-lg-2 control-label">Ingredient 6</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputIng6" name="ingredient6"></input>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputIng7" class="col-lg-2 control-label">Ingredient 7</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputIng7" name="ingredient7"></input>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputIng8" class="col-lg-2 control-label">Ingredient 8</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputIng8" name="ingredient8"></input>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputIng9" class="col-lg-2 control-label">Ingredient 9</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputIng9" name="ingredient9"></input>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputIng10" class="col-lg-2 control-label">Ingredient 10</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputIng10" name="ingredient10"></input>
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                      <button class="btn btn-default">Cancel</button> 
                       <button type="submit" class="btn btn-primary">Submit</button> 
                     </div>
                   </div>
