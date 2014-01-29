@@ -126,15 +126,15 @@
                                <div class=\"panel-heading\">
                                   <h3 class=\"panel-title\">" . $resultRow['Recipe_Name'] . "</h3>
                                </div>
-                               <div class=\"panel-body\"><h3>Ingredients</h3><ul>";
-                       for ($i = 1; $i < 11; $i++) {
+                               <div class=\"panel-body\"><h4>Ingredients</h4><ul>";
+                       for ($i = 2; $i < 12; $i++) {
                            if ($resultRow[$i] != '') {
                               echo "<li>" . $resultRow[$i] . "</li>";
                            }
                        }
                        echo    "</ul>";
-                       if ($resultRow[11] != '') {
-                              echo "<h3>Instructions</h3><p>" . $resultRow[11] . "</p>";
+                       if ($resultRow[12] != '') {
+                              echo "<h4>Instructions</h4><p>" . $resultRow[11] . "</p>";
                            }
                        echo    "</div>
                              </div>";
